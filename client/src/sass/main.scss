@@ -1,0 +1,22 @@
+/* ----------------------ABSTRACTS--------------------- */
+// Configuration & Helpers
+
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+/* ------------------------BASE------------------------ */
+// Global Base Styling
+
+@import "base/base";
+// @import "base/fonts";
+@import "base/typography";
+
+/* -----------------------LAYOUT------------------------ */
+// Layout Related Styling
+
+@import "layout/main-container";
+
+/* ---------------------COMPONENTS--------------------- */
+// Components Styling
+
+@import "components/buttons";
