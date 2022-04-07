@@ -1,0 +1,69 @@
+@use "abstracts/variables";
+
+.header {
+  background-color: variables.$primary-background-color;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+  &--scrolled {
+    background-color: variables.$primary-background-color;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    border-bottom: 0.1rem solid rgb(189, 189, 189, 0.2);
+    box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.2);
+  }
+
+  &__container {
+    display: flex;
+    padding: 2rem 0;
+  }
+
+  &__logo {
+    flex-grow: 1;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+
+    img {
+      height: 4rem;
+    }
+  }
+
+  &__nav {
+    flex-grow: 3;
+
+    ul {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      height: 100%;
+
+      li {
+        margin: 0 2rem;
+        font-weight: 400;
+        font-size: 1.8rem;
+
+        a {
+          transition: all 0.2s;
+        }
+
+        a:hover {
+          color: variables.$primary-text-color;
+        }
+      }
+    }
+  }
+
+  &__github {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    &-icon {
+      font-size: 4rem;
+    }
+  }
+}
