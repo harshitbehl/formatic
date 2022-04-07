@@ -64,6 +64,11 @@
 
     &-icon {
       font-size: 4rem;
+      color: variables.$primary-button-color;
+
+      &:hover {
+        color: variables.$primary-button-color-dark;
+      }
     }
   }
 }

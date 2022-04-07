@@ -22,7 +22,7 @@ function Header() {
   };
 
   return (
-    <div className={isScrolled ? "header--scrolled" : "header"}>
+    <header className={isScrolled ? "header--scrolled" : "header"}>
       <div className="header__container main-container">
         <div className="header__logo">
           <img
@@ -41,7 +41,7 @@ function Header() {
         </nav>
         <div className="header__github">
           <motion.a
-            whileHover={{ rotate: 360, scale: 1.1 }}
+            whileHover={{ rotate: "1turn", scale: 1.1 }}
             transition={{ duration: 0.4 }}
             href="https://github.com/harshitbehl/omnipresent-harshitbehl"
           >
@@ -49,7 +49,7 @@ function Header() {
           </motion.a>
         </div>
       </div>
-    </div>
+    </header>
   );
 }
 

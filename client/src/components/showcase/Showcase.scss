@@ -1,3 +1,62 @@
+@use "abstracts/variables";
+
 .showcase {
   height: 100vh;
+  background-color: variables.$primary-background-color-dark;
+
+  &__container {
+    display: flex;
+    height: 100%;
+  }
+
+  &__content-container {
+    flex-basis: 50%;
+    padding: 15% 4rem;
+
+    h1 {
+      color: black;
+      font-size: 5.5rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+
+      span {
+        color: variables.$primary-text-color;
+        display: inline-block;
+      }
+    }
+
+    p {
+      margin: 4rem 0;
+      color: black;
+      font-weight: 300;
+      font-size: 2.5rem;
+      letter-spacing: 0.1rem;
+    }
+
+    button {
+      padding: 1.5rem 4rem;
+      border: none;
+      border-radius: 0.5rem;
+      background-color: variables.$primary-button-color;
+      color: white;
+      font-size: 1.6rem;
+      font-weight: 100;
+      letter-spacing: 0.1rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: variables.$primary-button-color-dark;
+      }
+    }
+  }
+
+  &__graphic-container {
+    flex-basis: 50%;
+    padding: 5% 0;
+
+    img {
+      width: 100%;
+    }
+  }
 }
