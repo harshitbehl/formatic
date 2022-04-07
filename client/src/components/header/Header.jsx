@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./Header.scss";
 
-import { FaGithub } from "react-icons/fa";
+import { BsGithub } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,9 +40,13 @@ function Header() {
           </ul>
         </nav>
         <div className="header__github">
-          <a href="https://github.com/harshitbehl/omnipresent-harshitbehl">
-            <FaGithub className="header__github-icon" />
-          </a>
+          <motion.a
+            whileHover={{ rotate: 360, scale: 1.1 }}
+            transition={{ duration: 0.4 }}
+            href="https://github.com/harshitbehl/omnipresent-harshitbehl"
+          >
+            <BsGithub className="header__github-icon" />
+          </motion.a>
         </div>
       </div>
     </div>
