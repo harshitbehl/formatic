@@ -1,0 +1,78 @@
+@use "../../sass/abstracts/variables";
+
+.task-form {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+
+  label {
+    color: #ffecf3;
+    font-weight: 400;
+    padding: 0 1rem;
+  }
+
+  select {
+    font-family: "Roboto", sans-serif;
+    background-color: variables.$primary-theme-color;
+    border: 0.1rem solid #ffecf3;
+    border-radius: 2rem;
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    outline: none;
+    color: #ffecf3;
+    font-weight: 300;
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+
+  input {
+    font-family: "Roboto", sans-serif;
+    background-color: variables.$primary-theme-color;
+    border: 0.1rem solid #ffecf3;
+    border-radius: 2rem;
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    outline: none;
+    color: #ffecf3;
+    font-weight: 300;
+    font-size: 1.6rem;
+
+    &[type="date"] {
+      cursor: pointer;
+    }
+  }
+
+  &__double {
+    display: flex;
+    justify-content: space-between;
+
+    &-left {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-right {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  button {
+    background-color: #ffecf3;
+    border: 0.1rem solid #ffecf3;
+    border-radius: 2rem;
+    padding: 1rem 4rem;
+    color: variables.$primary-theme-color;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 1.6rem;
+    width: fit-content;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: variables.$primary-theme-color;
+      color: #ffecf3;
+    }
+  }
+}

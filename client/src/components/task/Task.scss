@@ -1,0 +1,55 @@
+@use "../../sass/abstracts/variables";
+
+.task {
+  height: 100vh;
+  background-color: variables.$primary-background-color-dark;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__form-container {
+    height: 60rem;
+    width: 100rem;
+    margin: auto;
+    display: flex;
+    border-radius: 5rem;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+      rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+
+  &__form-content {
+    flex-basis: 50%;
+    background-color: variables.$primary-theme-color;
+    position: relative;
+    padding: 4rem;
+
+    .task__background-wave {
+      transform: rotate(90deg) translate(100%, -20%);
+      transform-origin: top right;
+      width: 120%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+    }
+
+    .task__form-title {
+      color: #ffecf3;
+      font-weight: 500;
+      font-size: 2rem;
+    }
+  }
+
+  &__form-graphic {
+    flex-basis: 50%;
+    background-image: linear-gradient(
+        rgb(255, 66, 137, 0.1),
+        rgb(255, 66, 137, 0.4)
+      ),
+      url("../../assets/svg/formIllustration.svg");
+    background-size: cover;
+  }
+}
