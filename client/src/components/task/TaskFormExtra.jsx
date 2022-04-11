@@ -14,7 +14,11 @@ function TaskFormExtra({ handleChange, values }) {
                 name="workingHours"
                 onChange={handleChange}
                 value={values.workingHours}
+                required
               />
+              <span className="task-form__error-message">
+                Working hours is required
+              </span>
             </>
           ) : (
             <>
@@ -23,6 +27,7 @@ function TaskFormExtra({ handleChange, values }) {
                 name="maritalStatus"
                 onChange={handleChange}
                 value={values.maritalStatus}
+                required
               >
                 <option value="">--Please choose--</option>
                 <option value="Single">Single</option>
@@ -31,6 +36,9 @@ function TaskFormExtra({ handleChange, values }) {
                 <option value="Separated">Separated</option>
                 <option value="Divorced">Divorced</option>
               </select>
+              <span className="task-form__error-message">
+                Marital status is required
+              </span>
             </>
           )}
         </div>
@@ -45,7 +53,11 @@ function TaskFormExtra({ handleChange, values }) {
                 name="socialInsuranceNumber"
                 onChange={handleChange}
                 value={values.socialInsuranceNumber}
+                required
               />
+              <span className="task-form__error-message">
+                Social insurance is required
+              </span>
             </>
           )}
           {values.country === "Ghana" && (
@@ -56,7 +68,11 @@ function TaskFormExtra({ handleChange, values }) {
                 name="numberOfChildren"
                 onChange={handleChange}
                 value={values.numberOfChildren}
+                required
               />
+              <span className="task-form__error-message">
+                Number of children is required
+              </span>
             </>
           )}
         </div>
