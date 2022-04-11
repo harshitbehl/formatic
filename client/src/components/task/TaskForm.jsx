@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./TaskForm.scss";
 
+import TaskFormExtra from "./TaskFormExtra";
+
 // Redux Imports
 import { useDispatch } from "react-redux";
 import { addEmployee } from "../../features/employee/employeeSlice";
@@ -49,18 +51,15 @@ function TaskForm() {
       lastName: "",
       birthDate: "",
       holidayAllowance: "",
+      maritalStatus: "",
+      socialInsuranceNumber: "",
     });
   };
 
   return (
     <form className="task-form" onSubmit={handleSubmit}>
       <label htmlFor="country">Country Of Work</label>
-      <select
-        id="country"
-        name="country"
-        onChange={handleChange}
-        value={values.country}
-      >
+      <select name="country" onChange={handleChange} value={values.country}>
         <option value="">--Please choose a country--</option>
         <option value="Spain">Spain</option>
         <option value="Ghana">Ghana</option>
@@ -105,8 +104,10 @@ function TaskForm() {
             value={values.holidayAllowance}
           />
         </div>
-        <TaskFormExtra />
       </div>
+      {!values.country || (
+        <TaskFormExtra handleChange={handleChange} values={values} />
+      )}
 
       <button type="submit">Add Employee</button>
     </form>
