@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import "./TaskForm.scss";
 
+// Redux Imports
+import { useDispatch } from "react-redux";
+import { addEmployee } from "../../features/employee/employeeSlice";
+
 function TaskForm() {
   const [values, setValues] = useState({
     country: "",
@@ -9,6 +13,9 @@ function TaskForm() {
     birthDate: "",
     holidayAllowance: "",
   });
+
+  // Redux Functions
+  const dispatch = useDispatch();
 
   // Input Change Handler
   const handleChange = (e) => {
@@ -31,6 +38,9 @@ function TaskForm() {
     } catch (error) {
       console.log(error);
     }
+
+    // Updating Redux State & Dispatching Action
+    dispatch(addEmployee({ ...values }));
 
     // Clear Fields After Form Submission
     setValues({
@@ -95,6 +105,7 @@ function TaskForm() {
             value={values.holidayAllowance}
           />
         </div>
+        <TaskFormExtra />
       </div>
 
       <button type="submit">Add Employee</button>
