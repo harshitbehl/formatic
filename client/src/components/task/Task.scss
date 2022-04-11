@@ -1,9 +1,7 @@
 @use "../../sass/abstracts/variables";
 
 .task {
-  // height: 100vh;
-  padding: 5rem 0;
-  // background-color: variables.$primary-background-color;
+  padding: 5rem 0 15rem 0;
   background-image: url("../../assets/svg/taskSectionBackground.svg");
   background-size: cover;
 

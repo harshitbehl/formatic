@@ -1,0 +1,153 @@
+@use "../../sass/abstracts/variables";
+
+.footer {
+  background-color: variables.$primary-background-color-dark;
+
+  // Footer Top
+
+  &__top {
+    display: flex;
+    padding: 4rem;
+  }
+
+  &__logo {
+    flex-basis: 30%;
+
+    img {
+      height: 4rem;
+    }
+
+    p {
+      font-weight: 300;
+      margin: 2rem 0;
+      letter-spacing: 0.1rem;
+      font-size: 1.5rem;
+
+      .footer__logo-heart {
+        color: #f44336;
+      }
+
+      .footer__logo-maple {
+        color: #f44336;
+      }
+    }
+
+    &-icons {
+      color: variables.$primary-button-color;
+
+      .footer__logo-icon {
+        font-size: 3rem;
+        margin-right: 3rem;
+        cursor: pointer;
+
+        &:hover {
+          color: variables.$primary-button-color-dark;
+        }
+      }
+    }
+  }
+
+  &__other-pages {
+    flex-basis: 20%;
+
+    h4 {
+      color: variables.$primary-text-color;
+      font-size: 2rem;
+      font-weight: 400;
+    }
+
+    ul {
+      margin-top: 2rem;
+
+      li {
+        font-size: 1.5rem;
+        font-weight: 400;
+        letter-spacing: 0.1rem;
+        margin-bottom: 1rem;
+
+        a {
+          display: inline-block;
+        }
+
+        a:hover {
+          color: variables.$primary-text-color;
+        }
+      }
+    }
+  }
+
+  &__quick-links {
+    flex-basis: 20%;
+
+    h4 {
+      color: variables.$primary-text-color;
+      font-size: 2rem;
+      font-weight: 400;
+    }
+
+    ul {
+      margin-top: 2rem;
+
+      li {
+        font-size: 1.5rem;
+        font-weight: 400;
+        letter-spacing: 0.1rem;
+        margin-bottom: 1rem;
+
+        a {
+          display: inline-block;
+        }
+
+        a:hover {
+          color: variables.$primary-text-color;
+        }
+      }
+    }
+  }
+
+  &__social-media {
+    flex-basis: 30%;
+
+    h4 {
+      color: variables.$primary-text-color;
+      font-size: 2rem;
+      font-weight: 400;
+    }
+
+    p {
+      margin: 2rem 0;
+      font-weight: 300;
+      font-size: 1.5rem;
+      letter-spacing: 0.1rem;
+      line-height: 1.5;
+    }
+
+    &-icons {
+      color: variables.$primary-button-color;
+
+      .footer__social-media-icon {
+        font-size: 2rem;
+        margin-right: 2rem;
+        cursor: pointer;
+
+        &:hover {
+          color: variables.$primary-button-color-dark;
+        }
+      }
+    }
+  }
+
+  // Footer Bottom
+
+  &__bottom {
+    border-top: 0.1rem solid rgb(128, 128, 128, 0.2);
+    padding: 4rem 0;
+    text-align: end;
+
+    span {
+      color: grey;
+      font-size: 1.4rem;
+      font-weight: 300;
+    }
+  }
+}
