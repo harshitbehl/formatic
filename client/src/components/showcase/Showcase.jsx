@@ -19,16 +19,18 @@ function Showcase() {
             Take Home Task
           </h1>
           <p>Frontend Task, by Harshit Behl</p>
-          <motion.button
-            animate={{ scale: [1, 1.1, 1] }}
-            transition={{
-              duration: 1.5,
-              repeat: 2,
-              delay: 1.5,
-            }}
-          >
-            View Task
-          </motion.button>
+          <a href="#task-section">
+            <motion.button
+              animate={{ scale: [1, 1.1, 1] }}
+              transition={{
+                duration: 1.5,
+                repeat: 2,
+                delay: 1.5,
+              }}
+            >
+              View Task
+            </motion.button>
+          </a>
         </div>
         <div className="showcase__graphic-container">
           <motion.img

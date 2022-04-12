@@ -1,4 +1,5 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
 import "./App.scss";
 
 import Header from "./components/header/Header";
@@ -11,7 +12,10 @@ function App() {
       {/* Header */}
       <Header />
       {/* Pages */}
-      <Home />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<div>Page Not Found!</div>} />
+      </Routes>
       {/* Footer */}
       <Footer />
     </div>

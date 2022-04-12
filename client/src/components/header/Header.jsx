@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Header.scss";
 
 import { BsGithub } from "react-icons/bs";
@@ -16,7 +17,7 @@ function Header() {
   const createLink = (link, text) => {
     return (
       <li>
-        <a href={link}>{text}</a>
+        <Link to={link}>{text}</Link>
       </li>
     );
   };
@@ -32,7 +33,7 @@ function Header() {
         </div>
         <nav className="header__nav">
           <ul>
-            {createLink("#", "Home")}
+            {createLink("/", "Home")}
             {createLink("#", "About Us")}
             {createLink("#", "Services")}
             {createLink("#", "Resources")}
