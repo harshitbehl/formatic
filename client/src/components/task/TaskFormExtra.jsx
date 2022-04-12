@@ -1,7 +1,9 @@
 import React from "react";
 import "./TaskFormExtra.scss";
 
-function TaskFormExtra({ handleChange, values }) {
+import { Field, ErrorMessage } from "formik";
+
+function TaskFormExtra({ values }) {
   return (
     <div className="task-form-extra">
       <div className="task-form__double">
@@ -9,35 +11,24 @@ function TaskFormExtra({ handleChange, values }) {
           {values.country === "Brazil" ? (
             <>
               <label htmlFor="workingHours">Working Hours</label>
-              <input
-                type="number"
-                name="workingHours"
-                onChange={handleChange}
-                value={values.workingHours}
-                required
-              />
+              <Field type="number" name="workingHours" />
               <span className="task-form__error-message">
-                Working hours is required
+                <ErrorMessage name="workingHours" />
               </span>
             </>
           ) : (
             <>
-              <label htmlFor="">Marital Status</label>
-              <select
-                name="maritalStatus"
-                onChange={handleChange}
-                value={values.maritalStatus}
-                required
-              >
+              <label htmlFor="maritalStatus">Marital Status</label>
+              <Field as="select" name="maritalStatus">
                 <option value="">--Please choose--</option>
                 <option value="Single">Single</option>
                 <option value="Married">Married</option>
                 <option value="Widowed">Widowed</option>
                 <option value="Separated">Separated</option>
                 <option value="Divorced">Divorced</option>
-              </select>
+              </Field>
               <span className="task-form__error-message">
-                Marital status is required
+                <ErrorMessage name="maritalStatus" />
               </span>
             </>
           )}
@@ -48,30 +39,22 @@ function TaskFormExtra({ handleChange, values }) {
               <label htmlFor="socialInsuranceNumber">
                 Social Insurance Number
               </label>
-              <input
-                type="number"
-                name="socialInsuranceNumber"
-                onChange={handleChange}
-                value={values.socialInsuranceNumber}
-                required
-              />
+              <Field type="string" name="socialInsuranceNumber" />
               <span className="task-form__error-message">
-                Social insurance is required
+                <ErrorMessage name="socialInsuranceNumber" />
               </span>
             </>
           )}
           {values.country === "Ghana" && (
             <>
               <label htmlFor="numberOfChildren">Number Of Children</label>
-              <input
+              <Field
                 type="number"
                 name="numberOfChildren"
-                onChange={handleChange}
-                value={values.numberOfChildren}
-                required
+                id="numberOfChildren"
               />
               <span className="task-form__error-message">
-                Number of children is required
+                <ErrorMessage name="numberOfChildren" />
               </span>
             </>
           )}
