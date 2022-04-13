@@ -1,4 +1,4 @@
-![Logo](https://remote-europe.com/sites/default/files/styles/medium_300x300_/public/2021-08/omnipresent.png?itok=hDVlAUq1)
+<img src="https://remote-europe.com/sites/default/files/styles/medium_300x300_/public/2021-08/omnipresent.png?itok=hDVlAUq1" width="500" />
 
 ---
 
@@ -8,7 +8,7 @@ An interactive web application which makes employee onboarding a breeze. 💨
 
 ## 🔗 Live Demo
 
-[Click For Live Demo]("")
+[Click For Live Demo]("https://omnipresent-harshitbehl.vercel.app ")
 
 ## 💻 Run Locally
 
@@ -101,7 +101,7 @@ Start the server
 **Deployment**
 
 - Create a final build of application.
-- Deploy on firebase.
+- Deploy on vercel.
 
 ## 📄 Form Task
 
@@ -146,7 +146,8 @@ Start the server
 
 - On form submission a POST request to a dummy API is sent which responds with the contents of the post body and a dynamic id property.
 - The data will be available in chrome developer tools console.
-  ![Form Data](/assets/readmeImages/formData.png)
+  
+<img src="/assets/readmeImages/formData.png" width="500"/>
 
 **API Reference**: https://reqres.in/api/posts
 
@@ -166,7 +167,7 @@ Start the server
 
 **Package Manager:** NPM
 
-**Deployment:**
+**Deployment:** Vercel
 
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
@@ -179,6 +180,7 @@ Start the server
 ![Testing-Library](https://img.shields.io/badge/-TestingLibrary-%23E33332?style=for-the-badge&logo=testing-library&logoColor=white)
 ![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 
 ## 👨🏽‍💻 Author
 
