@@ -11,7 +11,7 @@ function TaskFormExtra({ values }) {
           {values.country === "Brazil" ? (
             <>
               <label htmlFor="workingHours">Working Hours</label>
-              <Field type="number" name="workingHours" />
+              <Field type="number" name="workingHours" placeholder="37.5" />
               <span className="task-form__error-message">
                 <ErrorMessage name="workingHours" />
               </span>
@@ -39,7 +39,11 @@ function TaskFormExtra({ values }) {
               <label htmlFor="socialInsuranceNumber">
                 Social Insurance Number
               </label>
-              <Field type="string" name="socialInsuranceNumber" />
+              <Field
+                type="string"
+                name="socialInsuranceNumber"
+                placeholder="917315885"
+              />
               <span className="task-form__error-message">
                 <ErrorMessage name="socialInsuranceNumber" />
               </span>
@@ -52,6 +56,7 @@ function TaskFormExtra({ values }) {
                 type="number"
                 name="numberOfChildren"
                 id="numberOfChildren"
+                placeholder="2"
               />
               <span className="task-form__error-message">
                 <ErrorMessage name="numberOfChildren" />

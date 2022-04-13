@@ -40,6 +40,11 @@
     &[type="date"] {
       cursor: pointer;
     }
+
+    &::placeholder {
+      color: #ff97be;
+      font-weight: 300;
+    }
   }
 
   &__error-message {

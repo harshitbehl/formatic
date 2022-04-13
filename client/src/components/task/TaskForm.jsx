@@ -2,39 +2,37 @@ import React from "react";
 import "./TaskForm.scss";
 
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import axios from "axios";
 import validationSchema from "../../utils/helpers/taskFormValidation";
 import TaskFormExtra from "./TaskFormExtra";
 
 // Redux Imports
-import { useDispatch } from "react-redux";
-import { addEmployee } from "../../features/employee/employeeSlice";
+// import { useDispatch } from "react-redux";
+// import { addEmployee } from "../../features/employee/employeeSlice";
 
 function TaskForm() {
   // Redux Functions
-  const dispatch = useDispatch();
+  // Can be used in future
+  // const dispatch = useDispatch();
 
   // Form Submit Handler
-  const handleSubmit = (values, { resetForm }) => {
-    // Send Data
-    Object.keys(values).forEach((key) => {
-      if (values[key] === "") {
-        delete values[key];
-      }
-    });
-
+  const handleSubmit = async (values, { resetForm }) => {
     try {
-      console.log({
-        method: "post",
-        url: "/api/v1/employees",
-        data: values,
-        header: { "Content-Type": "multipart/form-data" },
+      // Send Data
+      Object.keys(values).forEach((key) => {
+        if (values[key] === "") {
+          delete values[key];
+        }
       });
+      const res = await axios.post("https://reqres.in/api/posts", values);
+      console.log(res.data);
     } catch (error) {
       console.log(error);
     }
 
     // Updating Redux State & Dispatching Action
-    dispatch(addEmployee({ ...values }));
+    // Can be used in future
+    // dispatch(addEmployee({ ...values }));
 
     // Clear Fields After Form Submission
     resetForm({ values: "" });
@@ -73,14 +71,14 @@ function TaskForm() {
           <div className="task-form__double">
             <div className="task-form__double-left">
               <label htmlFor="firstName">First Name</label>
-              <Field type="text" name="firstName" />
+              <Field type="text" name="firstName" placeholder="John" />
               <span className="task-form__error-message">
                 <ErrorMessage name="firstName" />
               </span>
             </div>
             <div className="task-form__double-right">
               <label htmlFor="lastName">Last Name</label>
-              <Field type="text" name="lastName" />
+              <Field type="text" name="lastName" placeholder="Doe" />
               <span className="task-form__error-message">
                 <ErrorMessage name="lastName" />
               </span>
@@ -90,14 +88,14 @@ function TaskForm() {
           <div className="task-form__double">
             <div className="task-form__double-left">
               <label htmlFor="birthDate">Date Of Birth</label>
-              <Field type="date" name="birthDate" />
+              <Field type="date" name="birthDate" data-testid="birth-date" />
               <span className="task-form__error-message">
                 <ErrorMessage name="birthDate" />
               </span>
             </div>
             <div className="task-form__double-right">
               <label htmlFor="holidayAllowance">Holiday Allowance</label>
-              <Field type="number" name="holidayAllowance" />
+              <Field type="number" name="holidayAllowance" placeholder="30" />
               <span className="task-form__error-message">
                 <ErrorMessage name="holidayAllowance" />
               </span>

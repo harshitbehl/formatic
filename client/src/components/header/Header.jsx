@@ -23,7 +23,10 @@ function Header() {
   };
 
   return (
-    <header className={isScrolled ? "header--scrolled" : "header"}>
+    <header
+      className={isScrolled ? "header--scrolled" : "header"}
+      data-testid="header"
+    >
       <div className="header__container main-container">
         <div className="header__logo">
           <img
