@@ -8,7 +8,7 @@ An interactive web application which makes employee onboarding a breeze. 💨
 
 ## 🔗 Live Demo
 
-[Click For Live Demo]("https://omnipresent-harshitbehl.vercel.app ")
+[Click For Live Demo](https://omnipresent-harshitbehl.vercel.app)
 
 ## 💻 Run Locally
 
@@ -96,7 +96,7 @@ Start the server
 
 - Manual test each and every field using every possible input and values.
 - Add more validations according to possible scenarios.
-- Perform unit testing using jest.
+- Perform unit testing using jest & react testing library.
 
 **Deployment**
 
