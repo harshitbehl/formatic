@@ -8,7 +8,7 @@ function Task() {
   return (
     <section className="task" id="task-section">
       <div className="task__container main-container">
-        <h2 className="task__title section-title">Frontend Task</h2>
+        <h2 className="task__title section-title">Employee Onboarding</h2>
         <p className="task__subtitle">Onboarding Global Talent</p>
         <div className="task__form-container">
           <div className="task__form-content">

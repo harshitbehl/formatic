@@ -13,6 +13,7 @@ import {
   FaHeartbeat,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
+import appLogo from "../../assets/images/appLogo.png";
 
 function Footer() {
   const createLink = (link, text) => {
@@ -29,10 +30,7 @@ function Footer() {
     <footer className="footer">
       <div className="footer__top main-container">
         <div className="footer__logo">
-          <img
-            src="https://remote-europe.com/sites/default/files/styles/medium_300x300_/public/2021-08/omnipresent.png?itok=hDVlAUq1"
-            alt="Header Logo"
-          />
+          <img src={appLogo} alt="Header Logo" />
           <p>
             Made with <FaHeartbeat className="footer__logo-heart" /> in{" "}
             <FaCanadianMapleLeaf className="footer__logo-maple" /> by Harshit
@@ -79,7 +77,7 @@ function Footer() {
       </div>
 
       <div className="footer__bottom main-container">
-        <span>Copyright ©2022 Omnipresent. All Rights Reserved.</span>
+        <span>Copyright ©2022 Formatic. All Rights Reserved.</span>
       </div>
     </footer>
   );

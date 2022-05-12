@@ -14,11 +14,11 @@ function Showcase() {
               whileHover={{ rotate: 10 }}
               transition={{ type: "spring", stiffness: 500 }}
             >
-              Omnipresent
+              Formatic
             </motion.span>{" "}
-            Take Home Task
+            Form Application
           </h1>
-          <p>Frontend Task, by Harshit Behl</p>
+          <p>Employee Onboarding Application</p>
           <a href="#task-section">
             <motion.button
               animate={{ scale: [1, 1.1, 1] }}
@@ -28,7 +28,7 @@ function Showcase() {
                 delay: 1.5,
               }}
             >
-              View Task
+              View Form
             </motion.button>
           </a>
         </div>

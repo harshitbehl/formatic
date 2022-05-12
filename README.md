@@ -1,27 +1,27 @@
-<img src="https://remote-europe.com/sites/default/files/styles/medium_300x300_/public/2021-08/omnipresent.png?itok=hDVlAUq1" width="500" />
+<img src="assets/readmeImages/appLogo.png" width="400" />
 
 ---
 
-# Omnipresent Take Home Task
+# Formatic - Form Application - Employee Onboarding
 
 An interactive web application which makes employee onboarding a breeze. 💨
 
 ## 🔗 Live Demo
 
-[Click For Live Demo](https://omnipresent-harshitbehl.vercel.app)
+[Click For Live Demo](https://formatic.vercel.app)
 
 ## 💻 Run Locally
 
 Clone the project
 
 ```bash
-  git clone https://github.com/harshitbehl/omnipresent-harshitbehl.git
+  git clone https://github.com/harshitbehl/formatic.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd omnipresent-harshitbehl > cd client
+  cd formatic > cd client
 ```
 
 Install dependencies
@@ -40,10 +40,10 @@ Start the server
 
 - Interactive sticky header with an animated github source code button & links.
 - Beautiful and interactive landing page showcase with animations.
-  - Spring animated "Omnipresent" text on hover.
+  - Spring animated "Formatic" text on hover.
   - SVG Illustration animation on first render.
-  - A delayed animated attention grabbing button, which will guide towards the task section.
-- Task section with a space ship rocket theme.
+  - A delayed animated attention grabbing button, which will guide towards the onboarding form section.
+- Form section with a space ship rocket theme.
   - Modern & attractive form design.
   - Form is interactive and change as we enter inputs.
   - Form validations & errors.
@@ -80,7 +80,7 @@ Start the server
 
 **Design**
 
-- Select & wireframe application layout & design, take inspiration from omnipresent website.
+- Select & wireframe application layout & design, take inspiration from dribbble.
 - Select application theme, color pallette & typography.
 - Break application into components while ensuring it stays scalable.
 
@@ -146,7 +146,7 @@ Start the server
 
 - On form submission a POST request to a dummy API is sent which responds with the contents of the post body and a dynamic id property.
 - The data will be available in chrome developer tools console.
-  
+
 <img src="/assets/readmeImages/formData.png" width="500"/>
 
 **API Reference**: https://reqres.in/api/posts

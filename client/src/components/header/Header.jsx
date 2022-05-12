@@ -4,6 +4,7 @@ import "./Header.scss";
 
 import { BsGithub } from "react-icons/bs";
 import { motion } from "framer-motion";
+import appLogo from "../../assets/images/appLogo.png";
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,10 +30,7 @@ function Header() {
     >
       <div className="header__container main-container">
         <div className="header__logo">
-          <img
-            src="https://remote-europe.com/sites/default/files/styles/medium_300x300_/public/2021-08/omnipresent.png?itok=hDVlAUq1"
-            alt="Header Logo"
-          />
+          <img src={appLogo} alt="Header Logo" />
         </div>
         <nav className="header__nav">
           <ul>
@@ -47,7 +45,7 @@ function Header() {
           <motion.a
             whileHover={{ rotate: "1turn", scale: 1.1 }}
             transition={{ duration: 0.4 }}
-            href="https://github.com/harshitbehl/omnipresent-harshitbehl"
+            href="https://github.com/harshitbehl/formatic"
           >
             <BsGithub className="header__github-icon" />
           </motion.a>
